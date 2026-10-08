@@ -21,8 +21,9 @@ jobs:
  
       - name: 安装依赖包
         run: | # 安装依赖包
-          pip install -r ./requirements.txt 
-          
+           python -m pip install --upgrade pip
+           pip install -r ./requirements.txt
+           pip install httpx==0.27.2
       
       - name: Run main.py
         run: python main.py -u 19721652889 -p EVD96732 -l 267196676 #课程id，默认为心理课的
